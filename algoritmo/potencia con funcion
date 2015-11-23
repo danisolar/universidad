@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int pot (int base,int expo);
+int result=1;
+
+main()
+{
+	int a,b;
+	printf ("\ningrese la base y el exponente de la potencia\n");
+	scanf ("%d",&a);
+	do
+	{
+		scanf ("%d",&b);
+	}while(b<0);
+	result=pot(a,b);
+	printf("\nel resultado de %d ^ %d = %d\n",a,b,result);
+	system("PAUSE");
+	return 0;
+}
+
+int pot (int base,int expo)
+{
+	int i;
+	for (i=0;i<expo;i++)
+	{
+		result=result*base;
+	}
+	return (result);
+}
